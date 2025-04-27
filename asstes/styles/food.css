@@ -122,6 +122,13 @@ body {
     color: var(--food);
 }
 
+.mobile{
+    display: block;
+}
+
+.desc{
+    display: none;
+}
 @media (width>=1000px) {
     .container {
         width: 1000px;
@@ -141,5 +148,13 @@ body {
 
     #food ul .item {
         flex-wrap: wrap;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .desc{
+        display: block;
     }
 }
