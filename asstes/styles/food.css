@@ -1,15 +1,145 @@
 * {
     box-sizing: border-box;
 }
+
 img {
     display: block;
 }
+
 body {
     margin: 0;
+    padding: 0;
     font-family: vazirmatn;
 }
+
 .container {
-    width: 1000px;
+    /* width: 100%; */
+    width: 360px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px bisque solid;
+}
+
+.row {
+    display: flex;
+}
+
+#food {
+    margin-top: 128px;
+    background-color: rgb(54, 52, 52);
+}
+
+:root {
+    --food-title: rgba(219, 58, 52, 1);
+    --food: rgba(255, 255, 255, 1);
+    --food-desc: rgba(255, 255, 255, 0.7);
+}
+
+#food h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--food-title);
+}
+
+#food ul {
+    background-color: rgb(54, 52, 52);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#food ul li {
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+}
+
+#food ul .item {
+    /* display: flex; */
+    padding: 4px 5px;
+}
+
+#food .item div {
+    padding: 0 10px;
+}
+
+#food .item div p:nth-child(1) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--food);
+}
+
+#food .item div p:nth-child(2) {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 14px;
+    color: var(--food-desc);
+    width: 231px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#food .item div div {
+    /* display: flex; */
+
+    padding: 0;
+    margin: 0;
+    justify-content: end;
+    align-items: center;    
+}
+
+#food .item div div div {
+    /* display: flex; */
+    padding: 0;
+    margin-right: 2px;
+    flex-direction: column;
+    align-items: start;
+}
+
+#food .item .price {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--food);
+}
+
+#food .item .currency1 {
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 100%;
+    color: var(--food);
+}
+
+#food .item .currency2 {
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 100%;
+    color: var(--food);
+}
+
+@media (width>=1000px) {
+    .container {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #food h2 {
+        text-align: start;
+        font-weight: 900;
+        font-size: 32px;
+    }
+
+    #food ul li {
+        margin: 0;
+    }
+
+    #food ul .item {
+        flex-wrap: wrap;
+    }
 }
