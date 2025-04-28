@@ -122,6 +122,10 @@ body {
     color: var(--food);
 }
 
+.horizontal-menu{
+    margin-bottom: 0;
+}
+
 @media (width>=1000px) {
     .container {
         width: 1000px;
