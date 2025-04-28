@@ -1,3 +1,11 @@
+:root {
+  --width:100%;
+  --bg-menu:rgba(255, 200, 87, 1);
+  --bg-body:rgb(54, 52, 52);
+  --font-size:10px;
+  --font-weight:400;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -14,7 +22,7 @@ body{
 }
 
 header{
-  background-color: rgba(255, 200, 87, 1);
+  background-color: var(--bg-menu);
   height: 42px;
   display: flex;
   align-items: center;
@@ -23,26 +31,27 @@ header{
 }
 
 .logo{
-  width: 100%;
   width: 42px;
 }
 
 .horizontal-line{
-  width: 100%;
+  width: var(--width);
   background-color: rgba(0, 0, 0, 0.1);
   height: 0.5px;
 }
 
+@media(width<=1000px){
 .horizontal-menu{
   list-style: none;
   display: flex;
   justify-content: start;
   align-items: center;
-  background-color:  rgba(255, 200, 87, 1);
+  background-color: var(--bg-menu);
   margin-top: 0;
   padding: 10px 5px;
   overflow-x: auto;
   margin-bottom: 0;
+}
 }
 
 .box-items-menu{
@@ -65,16 +74,86 @@ header{
 
 .horizontal-menu li{
   margin: 0 5px;
- 
 }
+
 .name-food{
   width: 60px;
   height: 10px;
   font-family: 'vazirmatn';
-  font-size: 10px;
-  font-weight: 400;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
   line-height: 10px;
   color: rgba(0, 0, 0, 1);
   margin: 0;
   padding: 0;
 }
+
+@media (width>=1000px){
+  .container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  header{
+  width:var(--width);
+  height: 130px;
+}
+
+.logo{
+  width: 95.07px;
+  height: 90px;
+  
+}
+ .main-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-top: 70px;
+  }
+
+  #menu {
+    display: flex;
+    width: 20%;
+    flex-shrink: 0;
+    padding-top: 62px;
+    background-color: var(--bg-body);
+  }
+
+  .horizontal-menu {
+    width:var(--width);
+    flex-direction: column;
+    background-color: rgb(54, 52, 52);
+    /* background-color: rgb(135, 53, 53);  */
+    align-items: center;
+    padding: 20px 20px;
+    list-style: none;
+    margin-top: 0px;
+  }
+
+  .horizontal-menu li{
+    margin: 0 5px;
+    width: 100%;
+  }
+
+  .box-items-menu{
+    width: 152px;
+    height: 48px;
+    flex-direction: row;
+    background-color: rgba(255, 200, 87, 1);
+    padding-right: 12px;
+    justify-content: flex-start; 
+    align-items: center; 
+    text-align: right; 
+    gap: 12px;
+    margin: 10px 0;
+  }
+  
+  .name-food{
+    font-size: 14px;
+    font-weight: var(--font-weight);
+    line-height: 14px;
+    color: rgba(0, 0, 0, 1);
+    white-space: nowrap;
+  }
+  }
