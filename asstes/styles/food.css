@@ -107,18 +107,12 @@ body {
     color: var(--food);
 }
 
-#food .item .currency1 {
+#food .item .currency {
     font-weight: 700;
     font-size: 8px;
     line-height: 100%;
     color: var(--food);
-}
-
-#food .item .currency2 {
-    font-weight: 700;
-    font-size: 8px;
-    line-height: 100%;
-    color: var(--food);
+    padding-right: 5px;
 }
 
 
@@ -128,11 +122,6 @@ body {
 
 .desc {
     display: none;
-}
-
-
-.horizontal-menu {
-    margin-bottom: 0;
 }
 
 @media (width<1000px) {
@@ -159,6 +148,9 @@ body {
         text-align: start;
         font-weight: 900;
         font-size: 32px;
+        width: 97%;
+        padding: 48px 0 12px 0;
+        border-bottom: 2px solid var(--foob-border);
     }
 
 
@@ -166,7 +158,7 @@ body {
         display: flex;
         justify-content: start;
         align-items: start;
-        padding-top: 70px;
+        padding-top: 0;
         /* background-color: brown; */
     }
 
@@ -175,7 +167,6 @@ body {
     }
 
     #food ul {
-        border-top: 2px solid var(--foob-border);
         padding-top: 24px;
         display: flex;
         flex-wrap: wrap;
@@ -194,16 +185,16 @@ body {
         padding: 6px;
     }
 
+    #food ul li .item .foo{
+        justify-content: end;
+        background-color: blue;
+        width: 100%;
+    }
+
     #food ul li .item .desc {
         width: 100%;
         height: auto;
     }
-
-    .currency {
-        background-color: aquamarine;
-        margin-left: 40%;
-    }
-
 
     .mobile {
         display: none;
