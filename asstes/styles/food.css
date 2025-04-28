@@ -167,7 +167,7 @@ body {
         justify-content: start;
         align-items: start;
         padding-top: 70px;
-        background-color: brown;
+        /* background-color: brown; */
     }
 
     #food {
