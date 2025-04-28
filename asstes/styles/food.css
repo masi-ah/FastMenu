@@ -1,7 +1,10 @@
 :root {
+    --background: rgb(54, 52, 52);
+    --background-ul: rgba(255, 255, 255, 0.2);
     --food-title: rgba(219, 58, 52, 1);
     --food: rgba(255, 255, 255, 1);
     --food-desc: rgba(255, 255, 255, 0.7);
+
 }
 
 * {
@@ -31,7 +34,7 @@ body {
 #food {
     /* margin-top: -18px; */
     padding: 0;
-    background-color: rgb(54, 52, 52);
+    background-color: var(--background);
 }
 
 #food h2 {
@@ -45,7 +48,6 @@ body {
 }
 
 #food ul {
-    background-color: rgb(54, 52, 52);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -53,7 +55,7 @@ body {
 
 #food ul li {
     margin: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--background-ul);
     border-radius: 12px;
 }
 
@@ -129,6 +131,11 @@ body {
         margin-right: auto;
     }
 
+    body{
+        background-color: var(--background);
+
+    }
+
     #food h2 {
         text-align: start;
         font-weight: 900;
@@ -142,4 +149,98 @@ body {
     #food ul .item {
         flex-wrap: wrap;
     }
+
+    .main-wrapper {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        padding-top: 70px;
+        border: 2px solid white;
+    }
+
+    #food {
+        flex-grow: 1;
+    }
+
+    #menu {
+        display: flex;
+        width: 20%;
+        padding-top: 65px;        
+    }
+
+    .horizontal-menu{
+        flex-direction: column;
+    }
+
+    .box-items-menu{
+        width: 100%;
+ 
+    }
 }
+
+
+header{
+    background-color: rgba(255, 200, 87, 1);
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+  }
+  
+  .logo{
+    width: 100%;
+    width: 42px;
+  }
+  
+  .horizontal-line{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 0.5px;
+  }
+  
+  .horizontal-menu{
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color:  rgba(255, 200, 87, 1);
+    margin-top: 0;
+    padding: 10px 5px;
+    overflow-x: auto;
+    margin-bottom: 0;
+  }
+  
+  .box-items-menu{
+    /* width: 60px; */
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 8px 0;
+    flex-direction: column;
+  }
+  
+  .box-items-menu img {
+    /* width: 30px; */
+    height: 30px;
+    margin-bottom: 5px; 
+  }
+  
+  .horizontal-menu li{
+    margin: 0 5px;
+   
+  }
+  .name-food{
+    /* width: 60px; */
+    height: 10px;
+    font-family: 'vazirmatn';
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: rgba(0, 0, 0, 1);
+    margin: 0;
+    padding: 0;
+  }
