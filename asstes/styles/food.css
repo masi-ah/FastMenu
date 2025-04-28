@@ -1,7 +1,11 @@
 :root {
+    --background: rgb(54, 52, 52);
+    --background-ul: rgba(255, 255, 255, 0.2);
     --food-title: rgba(219, 58, 52, 1);
     --food: rgba(255, 255, 255, 1);
     --food-desc: rgba(255, 255, 255, 0.7);
+    --foob-border: rgba(219, 58, 52, 1);
+
 }
 
 * {
@@ -31,7 +35,7 @@ body {
 #food {
     /* margin-top: -18px; */
     padding: 0;
-    background-color: rgb(54, 52, 52);
+    background-color: var(--background);
 }
 
 #food h2 {
@@ -45,7 +49,6 @@ body {
 }
 
 #food ul {
-    background-color: rgb(54, 52, 52);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -53,7 +56,7 @@ body {
 
 #food ul li {
     margin: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--background-ul);
     border-radius: 12px;
 }
 
@@ -78,10 +81,6 @@ body {
     font-size: 10px;
     line-height: 14px;
     color: var(--food-desc);
-    width: 231px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 #food .item div div {
@@ -122,8 +121,27 @@ body {
     color: var(--food);
 }
 
-.horizontal-menu{
+
+.mobile {
+    display: block;
+}
+
+.desc {
+    display: none;
+}
+
+
+.horizontal-menu {
     margin-bottom: 0;
+}
+
+@media (width<1000px) {
+    #food .item div p:nth-child(2) {
+        width: 231px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 }
 
 @media (width>=1000px) {
@@ -133,17 +151,86 @@ body {
         margin-right: auto;
     }
 
+    body {
+        background-color: var(--background);
+    }
+
     #food h2 {
         text-align: start;
         font-weight: 900;
         font-size: 32px;
     }
 
-    #food ul li {
-        margin: 0;
+
+    .main-wrapper {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        padding-top: 70px;
+        /* background-color: brown; */
     }
 
-    #food ul .item {
-        flex-wrap: wrap;
+    #food {
+        flex-grow: 1;
     }
+
+    #food ul {
+        border-top: 2px solid var(--foob-border);
+        padding-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    #food ul li {
+        margin: 0;
+        width: 48%;
+    }
+
+    #food ul li .item {
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+        padding: 6px;
+    }
+
+    #food ul li .item .desc {
+        width: 100%;
+        height: auto;
+    }
+
+    .currency {
+        background-color: aquamarine;
+        margin-left: 40%;
+    }
+
+
+    .mobile {
+        display: none;
+    }
+
+    .desc {
+        display: block;
+    }
+
+
+    /*masi*/
+    #menu {
+        display: flex;
+        width: 20%;
+        flex-shrink: 0;
+        padding-top: 62px;
+    }
+
+    .horizontal-menu {
+        width: 100%;
+        flex-direction: column;
+    }
+
+
+    .horizontal-menu li{
+        margin: 0 5px;
+        width: 100%;
+      }
+
 }
